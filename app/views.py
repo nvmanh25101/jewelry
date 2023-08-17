@@ -191,6 +191,11 @@ def checkout(request):
                 quantity=item.quantity,
                 price=item.product.price,
             )
+            product_size = Product_size.objects.get(
+                product=item.product, size=item.size.id
+            )
+            product_size.quantity -= item.quantity
+            product_size.save()
             item.delete()
 
         return HttpResponseRedirect(reverse("app:index"))
