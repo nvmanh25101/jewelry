@@ -28,6 +28,12 @@ class Category_childAdmin(admin.ModelAdmin):
     list_display = ("name", "category")
 
 
+class Product_sizeInline(admin.StackedInline):
+    model = Product_size
+    extra = 0
+    can_delete = False
+
+
 class ProductAdmin(admin.ModelAdmin):
     exclude = ("admin",)
     list_display = (
@@ -39,6 +45,7 @@ class ProductAdmin(admin.ModelAdmin):
         "status",
         "category",
     )
+    inlines = [Product_sizeInline]
 
     class Media:
         css = ADMIN_SRC_CSS
