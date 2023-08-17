@@ -23,7 +23,7 @@ class Category(models.Model):
         return self.name
 
 
-class Category_child(models.Model):
+class CategoryChild(models.Model):
     name = models.CharField(unique=True, max_length=200)
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name="category_children"
@@ -47,7 +47,7 @@ class Product(models.Model):
         choices=APP_VALUE_STATUS_CHOICES,
         default=APP_VALUE_STATUS_DEFAULT,
     )
-    category = models.ForeignKey(Category_child, on_delete=models.CASCADE)
+    category = models.ForeignKey(CategoryChild, on_delete=models.CASCADE)
     admin = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True, null=True
     )
@@ -66,14 +66,14 @@ class Product(models.Model):
 class Size(models.Model):
     name = models.CharField(unique=True, max_length=200)
     products = models.ManyToManyField(
-        Product, through="Product_size", related_name="sizes"
+        Product, through="ProductSize", related_name="sizes"
     )
 
     def __str__(self):
         return self.name
 
 
-class Product_size(models.Model):
+class ProductSize(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     size = models.ForeignKey(Size, on_delete=models.CASCADE)
     quantity = models.IntegerField()
@@ -112,7 +112,7 @@ class Order(models.Model):
         return str(self.id)
 
 
-class Order_product(models.Model):
+class OrderProduct(models.Model):
     order = models.ForeignKey(Order, on_delete=models.PROTECT)
     product = models.ForeignKey(Product, on_delete=models.PROTECT, editable=False)
     name = models.CharField(max_length=200)
@@ -138,18 +138,18 @@ class Cart(models.Model):
 
     @property
     def get_total_item(self):
-        total = len(self.cart_item_set.all())
+        total = len(self.cartitem_set.all())
         return total
 
     @property
     def get_total_price(self):
         total = 0
-        for item in self.cart_item_set.all():
+        for item in self.cartitem_set.all():
             total += item.get_total_price
         return total
 
 
-class Cart_item(models.Model):
+class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     size = models.ForeignKey(Size, on_delete=models.CASCADE)

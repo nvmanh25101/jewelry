@@ -1,26 +1,3 @@
-{#$id = $_GET['id'];#}
-{#$sql = "select products.*, category_child.name as category_name, sizes.name AS name_size#}
-{#from products#}
-{#join category_child#}
-{#on category_child.id = products.category_child_id#}
-{#left join product_size#}
-{#on product_size.product_id = products.id#}
-{#left JOIN sizes#}
-{#ON product_size.size_id = sizes.id#}
-{#where products.id = '$id'";#}
-{#$result = mysqli_query($connect, $sql);#}
-{#$each = mysqli_fetch_array($result);#}
-{#$category_id = $each['category_child_id'];#}
-{#$sql = "select * from products#}
-{#  where category_child_id = '$category_id'";#}
-{#$result_category = mysqli_query($connect, $sql);#}
-{##}
-{#$sql = "select sizes.* from sizes#}
-{#    join product_size#}
-{#    on product_size.size_id = sizes.id#}
-{#    where product_size.product_id = '$id' and product_size.quantity > 0";#}
-{#$result_size = mysqli_query($connect, $sql);#}
-
 {% extends 'app/layout/master.html' %}
 {% load humanize %}
 {% load static %}

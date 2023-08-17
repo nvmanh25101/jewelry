@@ -49,8 +49,8 @@ class DetailView(generic.DetailView):
         product = self.get_object()
         context["product"] = product
 
-        sizes = product.sizes.filter(product_size__quantity__gt=0).values(
-            "id", "name", "product_size__quantity"
+        sizes = product.sizes.filter(productsize__quantity__gt=0).values(
+            "id", "name", "productsize__quantity"
         )
         context["sizes"] = sizes
 
@@ -83,7 +83,7 @@ def add_to_cart(request, product_id):
 
     color = request.POST["color"]
     material = request.POST["material"]
-    cart_item, created = Cart_item.objects.get_or_create(
+    cart_item, created = CartItem.objects.get_or_create(
         cart=cart_obj, product=product, size=size, color=color, material=material
     )
 
@@ -106,8 +106,8 @@ def update_item_cart(request):
     product_id = request.GET.get("product_id")
     type_update = request.GET.get("type_update")
     size_id = request.GET.get("size")
-    stock = Product_size.objects.get(product_id=product_id, size_id=size_id).quantity
-    cart_item = Cart_item.objects.get(product_id=product_id, cart_id=cart_id)
+    stock = ProductSize.objects.get(product_id=product_id, size_id=size_id).quantity
+    cart_item = CartItem.objects.get(product_id=product_id, cart_id=cart_id)
     is_ajax = request.headers.get("X-Requested-With") == "XMLHttpRequest"
 
     if is_ajax:
@@ -181,7 +181,7 @@ def checkout(request):
             total=cart_obj.get_total_price,
         )
         for item in cart_items:
-            Order_product.objects.create(
+            OrderProduct.objects.create(
                 order=order,
                 product=item.product,
                 name=item.product.name,
@@ -191,7 +191,7 @@ def checkout(request):
                 quantity=item.quantity,
                 price=item.product.price,
             )
-            product_size = Product_size.objects.get(
+            product_size = ProductSize.objects.get(
                 product=item.product, size=item.size.id
             )
             product_size.quantity -= item.quantity
@@ -295,7 +295,7 @@ def order(request, pk=None):
                 output_field=CharField(),
             )
         ).get(id=pk, user=user)
-        order_product = Order_product.objects.filter(order=order).select_related(
+        order_product = OrderProduct.objects.filter(order=order).select_related(
             "product"
         )
         context = {

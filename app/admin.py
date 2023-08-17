@@ -3,12 +3,12 @@ from django.contrib import admin
 from .define import *
 from .models import (
     Category,
-    Category_child,
+    CategoryChild,
     Product,
     Size,
-    Product_size,
+    ProductSize,
     Order,
-    Order_product,
+    OrderProduct,
 )
 
 
@@ -24,12 +24,12 @@ class CategoryAdmin(admin.ModelAdmin):
         js = ADMIN_SRC_JS
 
 
-class Category_childAdmin(admin.ModelAdmin):
+class CategoryChildAdmin(admin.ModelAdmin):
     list_display = ("name", "category")
 
 
-class Product_sizeInline(admin.StackedInline):
-    model = Product_size
+class ProductSizeInline(admin.StackedInline):
+    model = ProductSize
     extra = 0
     can_delete = False
 
@@ -45,14 +45,14 @@ class ProductAdmin(admin.ModelAdmin):
         "status",
         "category",
     )
-    inlines = [Product_sizeInline]
+    inlines = [ProductSizeInline]
 
     class Media:
         css = ADMIN_SRC_CSS
         js = ADMIN_SRC_JS
 
 
-class Product_sizeAdmin(admin.ModelAdmin):
+class ProductSizeAdmin(admin.ModelAdmin):
     list_display = ("id", "product", "size", "quantity")
 
     class Media:
@@ -61,7 +61,7 @@ class Product_sizeAdmin(admin.ModelAdmin):
 
 
 class ProductInline(admin.StackedInline):
-    model = Order_product
+    model = OrderProduct
     extra = 0
     readonly_fields = (
         "name",
@@ -110,6 +110,6 @@ class SizeAdmin(admin.ModelAdmin):
 admin.site.register(Order, OrderAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Size, SizeAdmin)
-admin.site.register(Product_size, Product_sizeAdmin)
+admin.site.register(ProductSize, ProductSizeAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Category_child, Category_childAdmin)
+admin.site.register(CategoryChild, CategoryChildAdmin)

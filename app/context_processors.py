@@ -1,4 +1,4 @@
-from app.models import Category, Category_child, Cart
+from app.models import Category, CategoryChild, Cart
 
 
 def shared_data(request):
