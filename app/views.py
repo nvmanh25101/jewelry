@@ -138,7 +138,7 @@ def cart(request):
     except Cart.DoesNotExist:
         cart_obj = Cart.objects.create(user=request.user)
 
-    cart_items = Cart_item.objects.select_related("product", "size").filter(
+    cart_items = CartItem.objects.select_related("product", "size").filter(
         cart=cart_obj
     )
 
@@ -159,7 +159,7 @@ def checkout(request):
         return HttpResponseRedirect(reverse("app:login"))
 
     cart_obj = Cart.objects.get(user=request.user)
-    cart_items = Cart_item.objects.select_related("product", "size").filter(
+    cart_items = CartItem.objects.select_related("product", "size").filter(
         cart=cart_obj
     )
     context = {
