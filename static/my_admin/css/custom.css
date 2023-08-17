@@ -1,0 +1,7 @@
+#id_special, #id_is_homepage {
+    display: flex;
+}
+.admin-image {
+     height: 100px;
+     width: 100px;
+}

@@ -1,0 +1,225 @@
+{% extends 'app/layout/master.html' %}
+{% load humanize %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/css/product.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/css/cart.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="mt-5 ms-5">
+        <h4 class="ms-3">Giỏ Hàng của bạn</h4>
+    </div>
+    <div class="Pagecart container mb-4 ">
+        <div class="row" id="form-checkout">
+            {% csrf_token %}
+            <div class="cart-content col-md-8">
+                <div class="Empty_cart"
+                        {% if cart_items %}
+                     style="display: none"
+                        {% else %}
+                     style=" display: flex;
+                        flex-direction: column;
+                        align-items: center;"
+                        {% endif %}
+                >
+                    <span class="cart-txt">Giỏ hàng đang trống</span>
+                    <br><br>
+                    <button class="bg-dark p-3">
+                        <a class="cart-txt-he" href="{% url 'app:index' %}">
+                            <i class="bi bi-cart me-2"></i> Tiếp tục mua sắm
+                        </a>
+                    </button>
+                </div>
+                <!--  -->
+                <div
+                        {% if cart_items %}
+                            style="display:block;"
+
+                        {% else %}
+                            style="display:none;"
+                        {% endif %}
+                >
+                    <table class="cart-table full">
+                        <tbody>
+                        {% for item in cart_items %}
+                            <tr class="cart__row table__section">
+                                <td class="item-img" data-label="Sản phẩm">
+                                    <a href="{% url 'app:detail' item.product.id %}" class="cart__image">
+                                        <img src="{{ item.product.image.url }}">
+                                    </a>
+                                </td>
+                                <td class="item-content-text">
+                                    <a href="{% url 'app:detail' item.product.id %}" class="item-text">
+                                        {{ item.product.name }}
+                                    </a>
+                                    <div class="mt-2">
+                                        Giá {{ item.product.price|intcomma }}&#8363
+                                    </div>
+                                    <div class="mt-2">
+                                        <span style="font-weight: bold;"> Mã SP:</span>{{ item.product.id }}
+                                    </div>
+                                    <div class="mt-2">
+                                        <span style="font-weight: bold;">Size:</span>{{ item.size.name }}
+                                    </div>
+
+                                    <div class="cart__remove"></div>
+                                </td>
+                                <td class="item-content-price" data-label="Đơn giá">
+                                    <span class="item-price"></span>
+                                </td>
+                                <td class="item-amount" data-label="Số lượng">
+                                    {% if item.product.quantity == 0 %}
+                                        echo '<span style="color:red;">Hết hàng</span>';
+                                    {% else %}
+                                        <div class="product-quantitys">
+                                            <div class="buttons_added">
+                                                <button class="minus is-form update-item-cart"
+                                                        data-type="minus"
+                                                        data-id="{{ item.product_id }}"
+                                                        data-cart="{{ item.cart_id }}"
+                                                        data-size="{{ item.size.id }}"
+                                                        type="button"
+                                                >
+                                                    -
+                                                </button>
+                                                <a class="input-qty">{{ item.quantity }}</a>
+                                                <button class="plus is-form  update-item-cart"
+                                                        data-type="plus"
+                                                        data-id="{{ item.product_id }}"
+                                                        data-cart="{{ item.cart_id }}"
+                                                        data-size="{{ item.size.id }}"
+                                                        type="button"
+                                                >
+                                                    +
+                                                </button>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </td>
+                                <td class="item-total-price" data-label="Tổng giá">
+                                <span class="item-price">
+                                    {{ item.get_total_price|intcomma }}&#8363
+                                </span>
+                                </td>
+                                <td class="item-total-price" data-label="Tổng giá">
+                                    {#                                    href="{% url 'app:remove_from_cart' item.product_id item.cart_id %}"#}
+                                    <button class="btn-text update-item-cart" type="button"
+                                            data-type="remove"
+                                            data-id="{{ item.product_id }}"
+                                            data-cart="{{ item.cart_id }}"
+                                            data-size="{{ item.size.id }}"
+                                    >
+                                        <i style="color: #b17f99" class="bi bi-x-circle-fill"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                    <div class="row total">
+                        <div class="col-md pt-4">
+                            <input class="mycheckbox m-3" type="checkbox" name="" id="" style="font-size: 20px;">Xuất
+                            hóa đơn GTGT
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-2"
+                    {% if not cart.get_total_item %}
+                 style="display:none;"
+                    {% else %}
+                 style="display:block;"
+                    {% endif %}
+            >
+                <div class="ms-4">
+                    <span class="cartt__subtotal-title me-4">Tổng tiền</span>
+                    <span class="cartt__total me-5">{{ cart.get_total_price| intcomma }}&#8363</span>
+                </div>
+                <div class="ms-4 mt-2" style="display: flex">
+                <span class="cartt__subtotal-title me-3 mt-3"><input class="mycheckbox" id="checkout-check"
+                                                                     type="checkbox"></span>
+                    <span class="me-5">
+                        <p>Khi bấm nút "Thanh toán" đồng nghĩa Khách hàng đã hiểu và đồng ý các Điều khoản dịch vụ của Pandora Việt Nam.</p>
+                    </span>
+                </div>
+                <a href="{% url 'app:checkout' %}" class="btn-payment-text mt-2 ms-4 btn">
+                    <span class="ps-5 pe-5 text-white">THANH TOÁN</span>
+                </a>
+
+                <div class="mt-3 ms-5" style="text-align: center;">
+                    <a href="{% url 'app:index' %}" style="color: #d1b8c5">Tiếp tục mua sắm </a>
+                </div>
+                <div class="img-pay mt-3" style="display: flex; ">
+                    <img class="ms-5" src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container more_info p-3 mb-3">
+        <div class="row">
+            <div class="col-md ">
+                <i class="bi bi-award"> Hàng chính hãng 100%</i>
+            </div>
+            <div class="col-md ">
+                <i class="bi bi-truck"> Miễn phí giao hàng toàn quốc</i>
+            </div>
+            <div class="col-md ">
+                <i class="bi bi-credit-card"> Mua trước trả sau với lãi suất 0%</i>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="hotline">
+        <a href="tel:0333135698" id="yBtn">
+            <i class="bi bi-telephone-fill"></i>
+        </a>
+        <div class="text-quotes">
+            <a href="tel:0333135698">0333135698</a>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            const link = $('.btn-payment-text').attr("href");
+            $(".btn-payment-text").removeAttr('href');
+            $(".btn-payment-text").click(function () {
+                if ($("#checkout-check").is(":checked")) {
+                    $(".btn-payment-text").attr("href", link);
+                } else {
+                    alert("Bạn chưa đồng ý với điều khoản của Pandora Việt Nam. Vui lòng đồng ý để tiếp tục thanh toán");
+                }
+            });
+            let btn_update_item = $(".update-item-cart");
+            for (let i = 0; i < btn_update_item.length; i++) {
+                btn_update_item.eq(i).click(function () {
+                    let type = $(this).attr("data-type");
+                    let id = $(this).attr("data-id");
+                    let cart = $(this).attr("data-cart");
+                    let size = $(this).attr("data-size");
+                    let url = "{% url 'app:update_item_cart' %}";
+                    $.ajax({
+                        url: url,
+                        type: "GET",
+                        data: {
+                            'cart_id': cart,
+                            'product_id': id,
+                            'type_update': type,
+                            'size': size,
+                        },
+                        success: function (data) {
+                            location.reload();
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+    <script src="{% static 'app/js/app.js' %}"></script>
+    <script src="{% static 'app/js/product.js' %}"></script>
+{% endblock %}

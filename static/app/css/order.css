@@ -1,0 +1,371 @@
+
+
+.order-product{
+   margin: 0px 150px;
+
+}
+.order-product h2{
+   text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+hr{
+
+   margin-bottom: 40px;
+    color: #C4C4C4;
+}
+.order-product-content{
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+
+    height: auto;
+    margin-bottom: 32px;
+}
+h1{
+    font-weight: bolder;
+    font-size: 22px;
+}
+.order-left{
+    padding: 15px;
+    width: 50%;
+    background-color: white;
+
+
+}
+.order-right{
+    padding: 15px;
+
+    width: 50%;
+    background-color: white;
+}
+.order-inner{
+    margin-left: 40px;
+}
+.item-content-price,
+.item-amount,
+.item-total-price{
+    font-size: 17px;
+
+}
+small{
+
+    font-size: 19px;
+}
+.product-quantitys{
+    text-align: center;
+    font-size: 19px;
+}
+.item-txt{
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.item-img{
+    font-size: 17px;
+    width: 25%;
+    text-align: center;
+
+}
+.cart__image img{
+    width: 100%;
+}
+.cart-table{
+    border-collapse:separate;
+    border-spacing:15px;
+}
+.item-content-text{
+    width: 40%;
+    text-align: center;
+    font-size: 17px;
+}
+
+
+.item-totall-price {
+    position: relative;
+}
+.product-vote-item {
+    display: flex;
+}
+.product-vote-thumb img {
+    width: 70px;
+}
+.item-vote {
+    display: block;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
+}
+
+.vote{
+    display: block;
+    color: #fff;
+    background-color: #000000;
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+.vote:hover{
+    background-color: #cccccc;
+    color: #000000;
+}
+
+.rate {
+    height: 46px;
+    padding: 0 10px;
+    margin-left: 8px;
+}
+.item-modal-vote {
+    display: flex;
+    align-items: center;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+
+.glow-on-hover {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.row-total{
+    margin-top: 30px;
+    float: right;
+}
+.item-price{
+    font-weight: bolder;
+    font-size: 19px;
+}
+.cart__subtotal-title{
+
+    margin:15px;
+    font-size: 23px;
+}
+.cart__subtotal{
+    padding-top: 10px;
+    margin-left: 30px;
+    font-size: 18px;
+}
+footer{
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 700px)
+{
+	*{
+		font-family: Playfair Display;
+	}
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+
+	td {
+
+		border: none;
+        padding: 0 14px;
+	}
+
+	td:before {
+
+	  font-size: 12px;
+
+		white-space: nowrap;
+
+	}
+	.item-img{
+		width: 100%;
+		display: flex;
+		margin:0;
+		justify-content: space-between;
+
+
+	}
+	.cart__image{
+
+		width: 150px;
+	}
+    .item-contentt-text ,
+	.item-contentt-price,
+	.item-amountt ,
+	.item-totall-price{
+        text-align:unset;
+		width: 100%;
+		display: block;
+        margin-top: 18px;
+	}
+    h2{
+        padding: 15px 0;
+    }
+
+	.item-contentt-text .item-text,
+	.item-contentt-price .item-price,
+	.item-amountt .product-quantitys,
+	.item-totall-price .item-price{
+		float: right;
+        color: black;
+        font-size: 15px;
+	}
+
+
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Ảnh";
+    font-size: 15px; }
+	td:nth-of-type(2):before { content: "Chi tiết sản phẩm";
+        font-size: 15px; }
+	td:nth-of-type(3):before { content: "Đơn giá";font-size: 15px; }
+	td:nth-of-type(4):before { content: "Số lượng";font-size: 15px; }
+	td:nth-of-type(5):before { content: "Thành Tiền";font-size: 15px; }
+
+    .cart__remove {
+		margin-top: 10px;
+		border-top: 1px solid #ccc ;
+        color: black;
+	}
+    .cart__remove small{
+        margin-top: 10px;
+    }
+
+					.cart__row{
+						width: 100%;
+					}
+					.hero-image {
+						width: 100%;
+						height: 250px;
+					}
+					.hero-image .hero-text{
+						font-size: 15px;
+					}
+
+    .order-product{
+        margin: 0;
+        width: 100%;
+    }
+    .order-product h2{
+        margin-bottom: 0px;
+        margin-top: 15px;
+       text-align: center;
+        width: 100%;
+
+
+    }
+    .order-product-content .order-left{
+
+        margin: 0px 15px;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .order-product-content .order-right{
+
+        margin: 15px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+  .item-txt{
+      float: right;
+  }
+  .cart__subtotal-title,
+  .cart__subtotal{
+      font-size: 16px;
+      margin: 0;
+      padding: 0 10px;
+  }
+
+}
+  .item-txt:hover{
+color: #FFBFBF;
+cursor: pointer;
+  }

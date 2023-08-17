@@ -1,0 +1,26 @@
+{% extends 'app/layout/master.html' %}
+{% load humanize %}
+{% block content %}
+    <ul class="products">
+        {% for product in product_list %}
+            <li>
+                <a href="{% url 'app:detail' product.pk %}" class="product-item">
+                    <div class="product-top">
+                        <div class="product-thumb">
+                            <img src="{{ product.image.url }}" alt="">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-cat">
+                            <h1>{{ product.name }}</h1>
+                        </div>
+                        <p class="product-price">
+                            {{ product.price|intcomma }}&#8363
+                        </p>
+
+                    </div>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

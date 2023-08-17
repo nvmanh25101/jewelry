@@ -1,0 +1,47 @@
+{% include 'app/layout/header.html' %}
+{% block css %} {% endblock %}
+</head>
+<body>
+{% include 'app/layout/navbar.html' %}
+
+<div class="new-item container">
+    {% block content %}{% endblock content %}
+</div>
+
+{% include 'app/layout/footer.html' %}
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#search")
+            .autocomplete({
+                source: "{% url 'app:search' %}",
+            })
+            .autocomplete("instance")._renderItem = function (ul, item) {
+             let product_id = item.id
+             let url = "{% url 'app:detail' 0 %}".replace('0', product_id)
+             let image_url = item.image
+                image_url = '/media/' + image_url
+            return $("<li class='sub-search-item'>")
+                .append(
+                    `<a href='${url}' class='sub-search-link'>
+                <img class='sub-search-link__img' src='${image_url}' alt=''>
+                <h5 class='sub-search-link__name'>
+                  ${item.name}
+                </h5>
+                <span class='sub-search-link__price'>
+                ${item.price}&#8363
+                </span>
+              </a>`
+                )
+                .appendTo(ul);
+        };
+        $(".sub-menu").parent("li").addClass("has-child");
+
+    });
+</script>
+{% block js %} {% endblock %}
+</body>
+</html>

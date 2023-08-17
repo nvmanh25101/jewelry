@@ -1,0 +1,42 @@
+{% extends 'app/layout/master.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/css/update_profile.css' %}">
+{% endblock %}
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="page_container mb-3">
+            <div class="main_content">
+                <h2>THÔNG TIN TÀI KHOẢN</h2>
+                <div class="form_name">
+                    <label for="">Username:</label>
+                    <input type="text" class=" m-1" value="{{ username }}">
+                </div>
+                <div class="form_name">
+                    <label for="">Email:</label>
+                    <input type="text" class=" ms-4" value="{{ email }}">
+                </div>
+                {{ form.as_p }}
+                <small style="color:red;">
+                    {% if error_message %}{{ error_message }}{% endif %}
+                </small>
+                <div class="btnup">
+                    <button class="btnUpdate" name="btnUpdate" type="submit">Cập nhật</button>
+                </div>
+                <a href="{% url 'app:profile' %}" class="mt-3 d-flex align-items-center fs-5">
+                    <i class="bi bi-arrow-left me-2"></i> <span>Quay lại</span>
+                </a>
+            </div>
+        </div>
+    </form>
+
+    <div id="hotline">
+        <a href="tel:0333135698" id="yBtn">
+            <i class="bi bi-telephone-fill"></i>
+        </a>
+        <div class="text-quotes">
+            <a href="tel:0333135698">0333135698</a>
+        </div>
+    </div>
+{% endblock %}

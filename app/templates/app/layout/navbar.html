@@ -1,0 +1,129 @@
+<header class="medium-header fixed-top">
+    <div id="title-header" class="title-header mb-3">
+        <p>QUÀ TẶNG LÊN ĐẾN 3,000,000Đ</p>
+        <button id="title" class="title">MUA NGAY</button>
+        <button onclick="document.getElementById('title-header').style.display='none'" class="close">&times;
+        </button>
+    </div>
+
+    <div class="site-header ">
+        <div class="header-left col-md-6">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                <div class="drawer_header">
+                    <a href="#"><img style="width:40%;height: 40%;"
+                                     src="{{ '/media/app/images/Pandora_Logo_Blank.jpg' }}"></a>
+                </div>
+
+                <a href="{% url 'app:index' %}">Trang chủ</a>
+                {% for category in category_list %}
+                    <button class="dropdown-btn">{{ category.name }}
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-container">
+                        {% for child in category.category_children.all %}
+                            <a href="">{{ child.name }}</a>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+
+                {% if not user.is_authenticated %}
+                    <a href="{% url 'app:login' %}">
+                        <i class="bi bi-people-fill" aria-hidden="true"></i>
+                        Tài khoản
+                    </a>
+                {% else %}
+                    <a href="./user_in4.php?id=<?= $each['id'] ?>">
+                        <i class="bi bi-people-fill" aria-hidden="true"></i>
+                        Chào , {{ user.username }}
+                    </a>
+                    <a href="{% url 'app:logout' %}">
+                        <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                        Đăng Xuất
+                    </a>
+                {% endif %}
+
+            </div>
+
+            <div id="main">
+                <span style="font-size:30px;cursor:pointer; color:#000" onclick="openNav()">&#9776; </span>
+            </div>
+
+            <div class="logo ms-5">
+                <a href="{% url 'app:index' %}">
+                    <img src="{{ '/media/app/images/Pandora_Logo_Blank.jpg' }}">
+                </a>
+            </div>
+            <div class="search ms-5">
+                <form action="./index.php" method="post" class="input-search ms-5" role="search">
+                    <button type="submit" class="btn icon-fallback-text">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                    </button>
+                    <input id="search" type="search" name="search"
+                           value placeholder="Tìm sản phẩm..." class="input-field" aria-label="Tim kiem ..."
+                           autocomplete="off" style="border: none;">
+                </form>
+                <div class="sub-search">
+                    <ul class="sub-search-list">
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-right">
+            <ul class="list-item">
+                <a class="item" href="#">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                </a>
+                {% if  user.is_anonymous %}
+                    <a class="item" href="{% url 'app:login' %}">
+                        <i class="bi bi-person" aria-hidden="true"></i>
+                    </a>
+                {% else %}
+                    <a class="item" href="{% url 'app:profile' %}">
+                        <i class="bi bi-person" aria-hidden="true"></i>
+                        Chào , {{ user.username }}
+                    </a>
+                    <a class="item" href="{% url 'app:logout' %}">
+                        <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                        Đăng Xuất
+                    </a>
+                {% endif %}
+                <a class="item" href="{% url 'app:cart' %}">
+                    <div class="cart-total-price">
+                        <i class="bi bi-bag" aria-hidden="true"></i>
+
+                        {% if not user.is_authenticated %}
+                            <span id="CartCount">0</span>
+                        {% else %}
+                            <span id="CartCount">{{ cart.get_total_item }}</span>
+                        {% endif %}
+                    </div>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+    <nav class="container">
+        <ul id="main-menu">
+            {% for category in category_list %}
+                <li>
+                    <a href="{% url 'app:index' %}?category={{ category.id }}">{{ category }}</a>
+                    {% for child in category.category_children.all %}
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{% url 'app:index' %}?category_child={{ child.id }}">{{ child.name }}</a>
+                            </li>
+                        </ul>
+                    {% endfor %}
+
+                </li>
+            {% endfor %}
+            <li><a href=".">Khuyến mãi</a></li>
+            <li><a href=".">Tuyển dụng</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="empty" style="height: 186px"></div>

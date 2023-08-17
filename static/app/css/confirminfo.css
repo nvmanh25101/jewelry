@@ -1,0 +1,169 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cover1.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+  }
+  
+  .hero-text {
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    
+  }
+ /* MAIN */
+ .main-container-header{
+     width: 100%;
+ }
+ .confirm-box{
+     margin: 10px 0px 20px 90px;
+ }
+ .form-page {
+    margin: 0 auto;
+ }
+.confirm-text{
+    font-family: Playfair Display;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.page_container{
+    justify-content: center;
+ 
+    margin-left: 100px;
+}
+.main-container{
+    margin-left: 300px;
+}
+.form_name{
+    margin-top: 30px;
+    font-family: Roboto;
+    font-size: 16px;
+}
+.form_address{
+    margin-top: 38px;
+    font-family: Roboto;
+    font-size: 16px;
+}
+.form_phone{
+    margin-top: 41px;
+    font-family: Roboto;
+    font-size: 16px;
+}
+.btnReturn{
+    background-color: white;
+    border-radius: 5px;
+    font-family: Playfair Display;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 45px;
+    text-align: center;
+    color: #338bbc;
+	padding: 12px;
+}
+.btnConfirm{
+	background-color: #338bbc;
+    color: white;
+    height: 45px;
+    width: 180px;
+    border-radius: 5px;
+    font-family: Playfair Display;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 45px;
+    border: none;
+}
+.btnup a{
+    padding-top: 4px;
+}
+.btnup{
+	display: flex;
+    justify-content: space-between;
+	
+}
+.btnReturn:hover,
+.btnConfirm:hover{
+    color: #FFBFBF;
+}
+@media only screen and (max-width: 700px){
+    .confirm-box{
+        width: 100%;
+        margin: 30px 0px;
+        font-size: 19px;
+        
+    }
+    .form-page{
+        width: 100%;
+    }
+  
+   
+
+    .btnConfirm{
+        margin-left: 0;
+    }
+    .btnConfirm,
+    .btnReturn{
+        width: 90px;
+        font-size: 17px;
+        height: 37px;
+        padding-top: 5;
+    }
+     .btnConfirm{
+          margin-left: 150px;
+    }
+   
+
+}
+
+.user_infor{
+
+}
+label{
+    margin-bottom: 10px;
+    
+}
+
+
+.pay{
+    border: #FFBFBF solid 1px;
+}
+
+.bybank, .shipcod, .vnpay, .momo{
+    border-bottom: #FFBFBF solid 1px;
+}
+.pay .gender, label{
+    font-size: 20px;
+}
+.infbank{
+    text-align: center;
+    background: #f3e7e7;
+}
+.infbank p{
+    padding: 10px 0 ;
+}
+
+.about-order{
+    background-color: #fafafa;
+}
+.item-img {
+    width: 20%;
+}
+.cart__image img {
+    max-width: 100%;
+}
+
+.inf-product{
+    color: #969696;
+}
