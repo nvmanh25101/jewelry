@@ -16,6 +16,10 @@ from app.forms import SignupForm, UpdateProfileForm
 from app.models import *
 from app.signals import user_created
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 # Create your views here.
 class IndexView(generic.ListView):
@@ -35,7 +39,7 @@ class IndexView(generic.ListView):
             return Product.objects.filter(
                 category=self.request.GET["category_child"]
             ).order_by("-pk")
-
+        logger.info("Get all product")
         return Product.objects.order_by("-pk")
 
 
@@ -62,9 +66,11 @@ def signup(request):
     if request.method == "POST":
         form = SignupForm(request.POST)
         if form.is_valid():
-            with transaction.atomic():
+            with transaction.atomic():  # transaction, nếu có lỗi thì toàn bộ bị hủy
                 new_user = form.save()
                 user_created.send(sender=User, instance=new_user, created=True)
+
+            logger.info("User created")
             return HttpResponseRedirect("/login")
     return render(request, "app/layout/signup.html", {"form": form})
 

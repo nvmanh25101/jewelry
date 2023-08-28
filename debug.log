@@ -1,0 +1,22 @@
+INFO 2023-08-28 14:37:01,344 autoreload 18792 92 Watching for file changes with StatReloader
+ERROR 2023-08-28 14:37:03,502 views 18792 8632 Get all product
+INFO 2023-08-28 14:37:44,535 autoreload 18792 92 D:\laragon\www\django_banhang\django_banhang\app\views.py changed, reloading.
+DEBUG 2023-08-28 14:37:44,536 proactor_events 18792 92 Using proactor: IocpProactor
+INFO 2023-08-28 14:37:45,332 autoreload 12476 4880 Watching for file changes with StatReloader
+INFO 2023-08-28 14:38:24,717 autoreload 12476 4880 D:\laragon\www\django_banhang\django_banhang\app\views.py changed, reloading.
+DEBUG 2023-08-28 14:38:24,720 proactor_events 12476 4880 Using proactor: IocpProactor
+INFO 2023-08-28 14:38:25,924 autoreload 13564 12964 Watching for file changes with StatReloader
+INFO 2023-08-28 14:38:47,952 autoreload 13564 12964 D:\laragon\www\django_banhang\django_banhang\app\views.py changed, reloading.
+DEBUG 2023-08-28 14:38:47,953 proactor_events 13564 12964 Using proactor: IocpProactor
+INFO 2023-08-28 14:38:48,714 autoreload 15476 14032 Watching for file changes with StatReloader
+INFO 2023-08-28 14:38:55,768 autoreload 15476 14032 D:\laragon\www\django_banhang\django_banhang\app\views.py changed, reloading.
+DEBUG 2023-08-28 14:38:55,769 proactor_events 15476 14032 Using proactor: IocpProactor
+INFO 2023-08-28 14:38:56,483 autoreload 20340 7232 Watching for file changes with StatReloader
+INFO 2023-08-28 14:39:03,344 autoreload 20340 7232 D:\laragon\www\django_banhang\django_banhang\app\views.py changed, reloading.
+DEBUG 2023-08-28 14:39:03,345 proactor_events 20340 7232 Using proactor: IocpProactor
+INFO 2023-08-28 14:39:04,208 autoreload 20692 19728 Watching for file changes with StatReloader
+INFO 2023-08-28 14:39:15,140 autoreload 20692 19728 D:\laragon\www\django_banhang\django_banhang\app\views.py changed, reloading.
+DEBUG 2023-08-28 14:39:15,140 proactor_events 20692 19728 Using proactor: IocpProactor
+INFO 2023-08-28 14:39:15,815 autoreload 10140 20040 Watching for file changes with StatReloader
+DEBUG 2023-08-28 14:39:39,987 proactor_events 10140 20040 Using proactor: IocpProactor
+DEBUG 2023-08-28 14:39:40,086 proactor_events 9348 4000 Using proactor: IocpProactor
