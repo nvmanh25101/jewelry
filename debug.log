@@ -20,3 +20,2198 @@ DEBUG 2023-08-28 14:39:15,140 proactor_events 20692 19728 Using proactor: IocpPr
 INFO 2023-08-28 14:39:15,815 autoreload 10140 20040 Watching for file changes with StatReloader
 DEBUG 2023-08-28 14:39:39,987 proactor_events 10140 20040 Using proactor: IocpProactor
 DEBUG 2023-08-28 14:39:40,086 proactor_events 9348 4000 Using proactor: IocpProactor
+INFO 2023-08-30 14:19:58,320 autoreload 16100 3576 Watching for file changes with StatReloader
+DEBUG 2023-08-30 14:20:25,887 proactor_events 16100 3576 Using proactor: IocpProactor
+DEBUG 2023-08-30 14:20:25,991 proactor_events 12856 8108 Using proactor: IocpProactor
+INFO 2023-08-30 14:20:29,606 autoreload 1696 17812 Watching for file changes with StatReloader
+INFO 2023-08-30 14:20:31,519 views 1696 7992 Get all product
+ERROR 2023-08-30 14:21:00,021 log 1696 19396 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categorychild-detail' not found. 'categorychild-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "categorychild-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+INFO 2023-08-30 14:22:17,195 autoreload 1696 17812 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-08-30 14:22:17,196 proactor_events 1696 17812 Using proactor: IocpProactor
+INFO 2023-08-30 14:22:18,019 autoreload 18832 20668 Watching for file changes with StatReloader
+INFO 2023-08-30 14:22:21,768 autoreload 18832 20668 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-08-30 14:22:21,769 proactor_events 18832 20668 Using proactor: IocpProactor
+INFO 2023-08-30 14:22:22,445 autoreload 20504 996 Watching for file changes with StatReloader
+INFO 2023-08-30 14:22:37,382 autoreload 20504 996 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-08-30 14:22:37,382 proactor_events 20504 996 Using proactor: IocpProactor
+INFO 2023-08-30 14:22:38,119 autoreload 16404 15292 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:23:54,600 log 16404 14156 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categorychild-detail' not found. 'categorychild-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "categorychild-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+INFO 2023-08-30 14:23:54,933 autoreload 16404 15292 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:23:54,934 proactor_events 16404 15292 Using proactor: IocpProactor
+INFO 2023-08-30 14:23:55,704 autoreload 15752 20656 Watching for file changes with StatReloader
+INFO 2023-08-30 14:27:40,777 autoreload 15752 20656 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:27:40,784 proactor_events 15752 20656 Using proactor: IocpProactor
+INFO 2023-08-30 14:27:41,632 autoreload 5068 14900 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:27:42,227 log 5068 11512 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categorychild-detail' not found. 'categorychild-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "categorychild-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+ERROR 2023-08-30 14:27:43,314 log 5068 11512 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categorychild-detail' not found. 'categorychild-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "categorychild-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+ERROR 2023-08-30 14:27:44,505 log 5068 11512 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categorychild-detail' not found. 'categorychild-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "categorychild-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+INFO 2023-08-30 14:27:56,418 autoreload 5068 14900 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:27:56,419 proactor_events 5068 14900 Using proactor: IocpProactor
+INFO 2023-08-30 14:27:57,142 autoreload 9832 16268 Watching for file changes with StatReloader
+INFO 2023-08-30 14:33:15,364 autoreload 9832 16268 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:33:15,365 proactor_events 9832 16268 Using proactor: IocpProactor
+INFO 2023-08-30 14:33:16,364 autoreload 10236 16688 Watching for file changes with StatReloader
+INFO 2023-08-30 14:33:35,399 autoreload 10236 16688 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:33:35,400 proactor_events 10236 16688 Using proactor: IocpProactor
+INFO 2023-08-30 14:33:36,222 autoreload 15136 20820 Watching for file changes with StatReloader
+INFO 2023-08-30 14:33:46,669 autoreload 15136 20820 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:33:46,669 proactor_events 15136 20820 Using proactor: IocpProactor
+INFO 2023-08-30 14:33:47,560 autoreload 18856 8624 Watching for file changes with StatReloader
+INFO 2023-08-30 14:34:37,095 autoreload 18856 8624 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:34:37,096 proactor_events 18856 8624 Using proactor: IocpProactor
+INFO 2023-08-30 14:34:37,898 autoreload 11348 18276 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:34:38,786 log 11348 13224 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1164, in get_field_names
+    assert field_name not in self._declared_fields, (
+AssertionError: Cannot both declare the field 'category' and include it in the ProductSerializer 'exclude' option. Remove the field or, if inherited from a parent serializer, disable with `category = None`.
+ERROR 2023-08-30 14:34:49,185 log 11348 13224 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1164, in get_field_names
+    assert field_name not in self._declared_fields, (
+AssertionError: Cannot both declare the field 'category' and include it in the ProductSerializer 'exclude' option. Remove the field or, if inherited from a parent serializer, disable with `category = None`.
+INFO 2023-08-30 14:34:49,422 autoreload 11348 18276 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:34:49,423 proactor_events 11348 18276 Using proactor: IocpProactor
+INFO 2023-08-30 14:34:50,222 autoreload 15316 16116 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:34:51,219 log 15316 11284 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+ERROR 2023-08-30 14:34:52,935 log 15316 11284 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+INFO 2023-08-30 14:36:15,980 autoreload 15316 16116 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:36:15,980 proactor_events 15316 16116 Using proactor: IocpProactor
+INFO 2023-08-30 14:36:16,761 autoreload 19988 19788 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:36:17,329 log 19988 13716 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+ERROR 2023-08-30 14:36:18,086 log 19988 13716 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+ERROR 2023-08-30 14:36:18,463 log 19988 13716 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+ERROR 2023-08-30 14:36:18,532 log 19988 13716 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+INFO 2023-08-30 14:37:54,881 autoreload 19988 19788 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:37:54,882 proactor_events 19988 19788 Using proactor: IocpProactor
+INFO 2023-08-30 14:37:55,845 autoreload 20852 19676 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:37:56,475 log 20852 20068 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'CategoryChild' not found. 'CategoryChild' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "CategoryChild". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+INFO 2023-08-30 14:40:03,012 autoreload 20852 19676 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:40:03,012 proactor_events 20852 19676 Using proactor: IocpProactor
+INFO 2023-08-30 14:40:03,813 autoreload 21160 21268 Watching for file changes with StatReloader
+INFO 2023-08-30 14:40:19,583 autoreload 21160 21268 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:40:19,583 proactor_events 21160 21268 Using proactor: IocpProactor
+INFO 2023-08-30 14:40:20,278 autoreload 4388 11432 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:40:34,262 log 4388 10032 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+INFO 2023-08-30 14:41:17,263 autoreload 4388 11432 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:41:17,264 proactor_events 4388 11432 Using proactor: IocpProactor
+INFO 2023-08-30 14:41:18,110 autoreload 6860 9136 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:41:20,283 log 6860 8772 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+ERROR 2023-08-30 14:41:21,245 log 6860 8772 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+ERROR 2023-08-30 14:41:22,328 log 6860 8772 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+ERROR 2023-08-30 14:41:22,809 log 6860 8772 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+ERROR 2023-08-30 14:41:23,160 log 6860 8772 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+ERROR 2023-08-30 14:41:23,565 log 6860 8772 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+ERROR 2023-08-30 14:41:40,167 log 6860 8772 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+DEBUG 2023-08-30 14:41:44,518 proactor_events 6860 9136 Using proactor: IocpProactor
+DEBUG 2023-08-30 14:41:44,622 proactor_events 20916 15056 Using proactor: IocpProactor
+INFO 2023-08-30 14:41:47,342 autoreload 11972 19660 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:41:49,023 log 11972 20948 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+ERROR 2023-08-30 14:42:02,453 log 11972 20948 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+INFO 2023-08-30 14:42:02,470 autoreload 11972 19660 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:42:02,471 proactor_events 11972 19660 Using proactor: IocpProactor
+INFO 2023-08-30 14:42:03,267 autoreload 16964 6360 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:42:05,859 log 16964 13416 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categorychild-detail' not found. 'categorychild-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "categorychild-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+INFO 2023-08-30 14:43:23,301 autoreload 16964 6360 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:43:23,302 proactor_events 16964 6360 Using proactor: IocpProactor
+INFO 2023-08-30 14:43:24,020 autoreload 18860 3712 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:43:26,338 log 18860 4064 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+INFO 2023-08-30 14:43:43,310 autoreload 18860 3712 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:43:43,310 proactor_events 18860 3712 Using proactor: IocpProactor
+INFO 2023-08-30 14:43:44,217 autoreload 1120 20928 Watching for file changes with StatReloader
+DEBUG 2023-08-30 14:44:24,353 proactor_events 1120 20928 Using proactor: IocpProactor
+DEBUG 2023-08-30 14:44:24,436 proactor_events 10404 2144 Using proactor: IocpProactor
+INFO 2023-08-30 14:44:27,306 autoreload 12028 10956 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:44:29,580 log 12028 9344 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+INFO 2023-08-30 14:46:10,812 autoreload 12028 10956 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:46:10,812 proactor_events 12028 10956 Using proactor: IocpProactor
+INFO 2023-08-30 14:46:11,525 autoreload 15052 19304 Watching for file changes with StatReloader
+INFO 2023-08-30 14:48:12,784 autoreload 15052 19304 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-08-30 14:48:12,784 proactor_events 15052 19304 Using proactor: IocpProactor
+INFO 2023-08-30 14:48:13,627 autoreload 8332 18328 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:48:14,203 log 8332 10112 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 280, in __iter__
+    self._fetch_all()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\sql\compiler.py", line 507, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\sql\compiler.py", line 55, in pre_sql_setup
+    self.setup_query()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\sql\compiler.py", line 46, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\sql\compiler.py", line 248, in get_select
+    related_klass_infos = self.get_related_selections(select)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\sql\compiler.py", line 979, in get_related_selections
+    raise FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'category_child'. Choices are: category, admin
+INFO 2023-08-30 14:54:14,114 autoreload 8332 18328 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-08-30 14:54:14,115 proactor_events 8332 18328 Using proactor: IocpProactor
+INFO 2023-08-30 14:54:14,870 autoreload 18312 19688 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:54:18,281 log 18312 16880 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+INFO 2023-08-30 14:54:32,075 autoreload 18312 19688 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:54:32,075 proactor_events 18312 19688 Using proactor: IocpProactor
+INFO 2023-08-30 14:54:32,809 autoreload 17420 12132 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:54:33,362 log 17420 13752 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categorychild-detail' not found. 'categorychild-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "categorychild-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+INFO 2023-08-30 14:55:10,507 autoreload 17420 12132 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-30 14:55:10,507 proactor_events 17420 12132 Using proactor: IocpProactor
+INFO 2023-08-30 14:55:11,388 autoreload 15052 9152 Watching for file changes with StatReloader
+ERROR 2023-08-30 14:55:12,192 log 15052 17360 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+INFO 2023-08-30 14:57:30,177 autoreload 15052 9152 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-08-30 14:57:30,178 proactor_events 15052 9152 Using proactor: IocpProactor
+INFO 2023-08-30 14:57:30,913 autoreload 21320 20780 Watching for file changes with StatReloader
+INFO 2023-08-30 14:57:41,095 autoreload 21320 20780 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-08-30 14:57:41,096 proactor_events 21320 20780 Using proactor: IocpProactor
+INFO 2023-08-30 14:57:41,863 autoreload 16860 10928 Watching for file changes with StatReloader
+INFO 2023-08-30 14:57:46,497 autoreload 16860 10928 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-08-30 14:57:46,498 proactor_events 16860 10928 Using proactor: IocpProactor
+INFO 2023-08-30 14:57:47,307 autoreload 19372 4656 Watching for file changes with StatReloader
+INFO 2023-08-30 14:57:54,382 autoreload 19372 4656 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-08-30 14:57:54,382 proactor_events 19372 4656 Using proactor: IocpProactor
+DEBUG 2023-08-30 14:57:54,582 proactor_events 17888 17120 Using proactor: IocpProactor
+INFO 2023-08-30 15:07:34,752 autoreload 11736 2328 Watching for file changes with StatReloader
+DEBUG 2023-08-30 15:07:46,938 proactor_events 11736 2328 Using proactor: IocpProactor
+DEBUG 2023-08-30 15:07:47,039 proactor_events 11616 18440 Using proactor: IocpProactor
+INFO 2023-08-30 15:07:58,048 autoreload 532 15676 Watching for file changes with StatReloader
+INFO 2023-08-30 15:09:19,117 autoreload 532 15676 D:\laragon\www\django_banhang\django_banhang\django_banhang\settings.py changed, reloading.
+INFO 2023-08-30 15:09:33,228 autoreload 12088 3280 Watching for file changes with StatReloader
+INFO 2023-08-30 15:09:51,488 autoreload 13568 18852 Watching for file changes with StatReloader
+INFO 2023-08-30 15:09:59,202 views 13568 21296 Get all product
+ERROR 2023-08-30 15:10:03,050 log 13568 21296 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'product-detail' not found. 'product-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "product-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+INFO 2023-08-30 15:16:02,024 autoreload 15456 9852 Watching for file changes with StatReloader
+INFO 2023-08-30 15:16:03,357 views 15456 4388 Get all product
+ERROR 2023-08-30 15:16:06,368 log 15456 4388 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'product-detail' not found. 'product-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "product-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+INFO 2023-08-30 15:16:25,751 autoreload 15456 9852 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-30 15:16:26,627 autoreload 7380 15376 Watching for file changes with StatReloader
+INFO 2023-08-30 15:16:37,605 autoreload 7380 15376 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-30 15:16:38,486 autoreload 19720 10252 Watching for file changes with StatReloader
+ERROR 2023-08-30 15:16:38,971 log 19720 7292 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'product-detail' not found. 'product-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "product-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+INFO 2023-08-30 15:16:59,947 autoreload 19720 10252 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-30 15:17:00,786 autoreload 15592 13308 Watching for file changes with StatReloader
+INFO 2023-08-30 15:18:34,446 autoreload 15592 13308 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-30 15:18:35,251 autoreload 19500 19532 Watching for file changes with StatReloader
+WARNING 2023-08-30 15:22:36,707 log 19500 13676 Not Found: /favicon.ico
+INFO 2023-08-30 15:40:15,494 autoreload 19500 19532 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-30 15:40:16,722 autoreload 17296 10252 Watching for file changes with StatReloader
+INFO 2023-08-31 09:31:54,080 autoreload 21096 2808 Watching for file changes with StatReloader
+INFO 2023-08-31 09:31:56,425 views 21096 13444 Get all product
+ERROR 2023-08-31 09:32:08,466 log 21096 18184 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+ERROR 2023-08-31 09:33:37,096 log 21096 13444 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+WARNING 2023-08-31 09:33:37,574 log 21096 13444 Not Found: /favicon.ico
+INFO 2023-08-31 09:36:59,340 autoreload 21096 2808 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-08-31 09:36:59,341 proactor_events 21096 2808 Using proactor: IocpProactor
+INFO 2023-08-31 09:37:00,369 autoreload 1224 11148 Watching for file changes with StatReloader
+ERROR 2023-08-31 09:37:00,800 log 1224 4776 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+ERROR 2023-08-31 09:37:06,037 log 1224 4776 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+ERROR 2023-08-31 09:37:13,849 log 1224 4776 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+ERROR 2023-08-31 09:37:15,618 log 1224 4776 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+ERROR 2023-08-31 09:37:16,107 log 1224 4776 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+ERROR 2023-08-31 09:37:16,959 log 1224 4776 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+ERROR 2023-08-31 09:37:17,753 log 1224 4776 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+ERROR 2023-08-31 09:37:18,561 log 1224 4776 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+DEBUG 2023-08-31 09:37:25,499 proactor_events 1224 11148 Using proactor: IocpProactor
+DEBUG 2023-08-31 09:37:25,602 proactor_events 15840 20376 Using proactor: IocpProactor
+INFO 2023-08-31 09:37:37,317 autoreload 1308 5688 Watching for file changes with StatReloader
+ERROR 2023-08-31 09:37:41,998 log 1308 2380 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+ERROR 2023-08-31 09:37:43,232 log 1308 2380 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+ERROR 2023-08-31 09:37:44,041 log 1308 2380 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+ERROR 2023-08-31 09:38:49,499 log 1308 2380 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+TypeError: 'ModelBase' object is not iterable
+INFO 2023-08-31 09:38:49,501 autoreload 1308 5688 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 09:38:50,203 autoreload 15648 17928 Watching for file changes with StatReloader
+INFO 2023-08-31 09:39:03,156 autoreload 15648 17928 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-31 09:39:03,905 autoreload 18120 17660 Watching for file changes with StatReloader
+INFO 2023-08-31 09:39:34,776 autoreload 18120 17660 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 09:39:35,580 autoreload 19668 992 Watching for file changes with StatReloader
+ERROR 2023-08-31 09:39:36,456 log 19668 10096 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\sql\compiler.py", line 1549, in execute_sql
+    sql, params = self.as_sql()
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\sql\compiler.py", line 736, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup(
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\sql\compiler.py", line 84, in pre_sql_setup
+    self.setup_query(with_col_aliases=with_col_aliases)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\sql\compiler.py", line 73, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select(
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\sql\compiler.py", line 279, in get_select
+    related_klass_infos = self.get_related_selections(select, select_mask)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\sql\compiler.py", line 1367, in get_related_selections
+    raise FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'category_child'. Choices are: category, admin
+INFO 2023-08-31 09:39:50,208 autoreload 19668 992 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 09:39:51,464 autoreload 10764 5200 Watching for file changes with StatReloader
+INFO 2023-08-31 09:39:55,649 autoreload 10764 5200 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 09:39:56,635 autoreload 4212 6284 Watching for file changes with StatReloader
+INFO 2023-08-31 09:45:44,674 autoreload 4212 6284 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 09:45:45,442 autoreload 14232 12932 Watching for file changes with StatReloader
+INFO 2023-08-31 09:45:47,764 autoreload 14232 12932 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 09:45:48,721 autoreload 9100 6956 Watching for file changes with StatReloader
+INFO 2023-08-31 09:46:31,922 autoreload 9100 6956 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 09:46:33,146 autoreload 16124 3000 Watching for file changes with StatReloader
+ERROR 2023-08-31 09:46:33,724 log 16124 1272 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 18, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\query.py", line 1883, in _fetch_all
+    self._prefetch_related_objects()
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\query.py", line 1273, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\db\models\query.py", line 2296, in prefetch_related_objects
+    raise AttributeError(
+AttributeError: Cannot find 'category_children' on Product object, 'category_children' is an invalid parameter to prefetch_related()
+INFO 2023-08-31 09:46:49,856 autoreload 16124 3000 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 09:46:50,654 autoreload 1368 18340 Watching for file changes with StatReloader
+INFO 2023-08-31 09:50:01,807 autoreload 1368 18340 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 09:50:02,828 autoreload 2488 20128 Watching for file changes with StatReloader
+INFO 2023-08-31 09:50:09,294 autoreload 2488 20128 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 09:50:10,021 autoreload 11996 16132 Watching for file changes with StatReloader
+INFO 2023-08-31 10:15:19,902 autoreload 764 13776 Watching for file changes with StatReloader
+INFO 2023-08-31 10:18:53,738 autoreload 764 13776 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-31 10:18:54,560 autoreload 2464 10964 Watching for file changes with StatReloader
+INFO 2023-08-31 10:19:06,361 autoreload 2464 10964 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-31 10:19:07,380 autoreload 19984 13672 Watching for file changes with StatReloader
+INFO 2023-08-31 10:22:38,637 autoreload 19984 13672 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-31 10:22:39,735 autoreload 16828 8932 Watching for file changes with StatReloader
+ERROR 2023-08-31 10:22:46,990 log 16828 15728 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CategoryChild' object is not iterable
+INFO 2023-08-31 10:23:16,652 autoreload 16828 8932 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-31 10:23:17,519 autoreload 17316 12272 Watching for file changes with StatReloader
+INFO 2023-08-31 10:23:23,961 autoreload 17316 12272 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-31 10:23:25,093 autoreload 20192 2364 Watching for file changes with StatReloader
+INFO 2023-08-31 10:23:29,950 autoreload 20192 2364 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-31 10:23:30,689 autoreload 11124 12264 Watching for file changes with StatReloader
+INFO 2023-08-31 10:23:47,552 autoreload 11124 12264 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-31 10:23:48,412 autoreload 10584 6380 Watching for file changes with StatReloader
+INFO 2023-08-31 10:23:56,621 autoreload 10584 6380 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-31 10:23:57,440 autoreload 10016 18756 Watching for file changes with StatReloader
+INFO 2023-08-31 10:24:00,390 autoreload 10016 18756 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-31 10:24:01,266 autoreload 8932 16828 Watching for file changes with StatReloader
+ERROR 2023-08-31 10:24:02,428 log 8932 19536 Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\laragon\www\django_banhang\django_banhang\api\views.py", line 16, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `description` is not valid for model `CategoryChild`.
+INFO 2023-08-31 10:24:15,595 autoreload 8932 16828 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+INFO 2023-08-31 10:24:16,363 autoreload 1728 20752 Watching for file changes with StatReloader
+ERROR 2023-08-31 11:08:39,415 log 1728 2464 Internal Server Error: /api/products
+Traceback (most recent call last):
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "D:\laragon\www\django_banhang\django_banhang\env\lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/products/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+INFO 2023-08-31 11:12:22,767 autoreload 1728 20752 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 11:12:23,530 autoreload 9256 21052 Watching for file changes with StatReloader
+INFO 2023-08-31 11:13:23,047 autoreload 9256 21052 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 11:13:23,938 autoreload 18448 15392 Watching for file changes with StatReloader
+INFO 2023-08-31 11:13:27,024 autoreload 18448 15392 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+INFO 2023-08-31 11:13:27,839 autoreload 11772 5560 Watching for file changes with StatReloader
+INFO 2023-09-04 13:17:54,391 autoreload 15516 6192 Watching for file changes with StatReloader
+INFO 2023-09-04 13:18:00,175 views 15516 20828 Get all product
+WARNING 2023-09-04 13:18:07,595 log 15516 5196 Not Found: /favicon.ico
+INFO 2023-09-04 13:19:25,309 autoreload 13996 18080 Watching for file changes with StatReloader
+DEBUG 2023-09-04 13:19:36,022 proactor_events 13996 18080 Using proactor: IocpProactor
+DEBUG 2023-09-04 13:19:36,131 proactor_events 972 18352 Using proactor: IocpProactor
+INFO 2023-09-04 13:21:25,124 autoreload 15516 6192 D:\laragon\www\django_banhang\django_banhang\api\urls.py changed, reloading.
+DEBUG 2023-09-04 13:21:25,136 proactor_events 15516 6192 Using proactor: IocpProactor
+INFO 2023-09-04 13:21:25,911 autoreload 22192 19492 Watching for file changes with StatReloader
+INFO 2023-09-04 13:22:24,782 autoreload 22192 19492 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:22:24,782 proactor_events 22192 19492 Using proactor: IocpProactor
+INFO 2023-09-04 13:22:25,479 autoreload 7392 13624 Watching for file changes with StatReloader
+INFO 2023-09-04 13:22:55,164 autoreload 7392 13624 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:22:55,164 proactor_events 7392 13624 Using proactor: IocpProactor
+INFO 2023-09-04 13:22:55,973 autoreload 22476 12856 Watching for file changes with StatReloader
+INFO 2023-09-04 13:24:13,128 autoreload 22476 12856 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:24:13,129 proactor_events 22476 12856 Using proactor: IocpProactor
+INFO 2023-09-04 13:24:14,002 autoreload 22372 20040 Watching for file changes with StatReloader
+INFO 2023-09-04 13:24:16,753 autoreload 22372 20040 D:\laragon\www\django_banhang\django_banhang\api\urls.py changed, reloading.
+DEBUG 2023-09-04 13:24:16,754 proactor_events 22372 20040 Using proactor: IocpProactor
+INFO 2023-09-04 13:24:17,472 autoreload 664 1848 Watching for file changes with StatReloader
+INFO 2023-09-04 13:24:50,455 autoreload 664 1848 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:24:50,456 proactor_events 664 1848 Using proactor: IocpProactor
+INFO 2023-09-04 13:24:51,198 autoreload 1360 11924 Watching for file changes with StatReloader
+INFO 2023-09-04 13:25:07,061 autoreload 1360 11924 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:25:07,062 proactor_events 1360 11924 Using proactor: IocpProactor
+INFO 2023-09-04 13:25:07,749 autoreload 3708 12016 Watching for file changes with StatReloader
+INFO 2023-09-04 13:25:52,318 autoreload 3708 12016 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:25:52,318 proactor_events 3708 12016 Using proactor: IocpProactor
+INFO 2023-09-04 13:25:53,054 autoreload 4196 18788 Watching for file changes with StatReloader
+INFO 2023-09-04 13:26:16,383 autoreload 4196 18788 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:26:16,383 proactor_events 4196 18788 Using proactor: IocpProactor
+INFO 2023-09-04 13:26:17,165 autoreload 22048 22480 Watching for file changes with StatReloader
+INFO 2023-09-04 13:26:53,366 autoreload 22048 22480 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:26:53,367 proactor_events 22048 22480 Using proactor: IocpProactor
+INFO 2023-09-04 13:26:54,046 autoreload 16964 14880 Watching for file changes with StatReloader
+INFO 2023-09-04 13:27:03,293 autoreload 16964 14880 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:27:03,294 proactor_events 16964 14880 Using proactor: IocpProactor
+INFO 2023-09-04 13:27:04,004 autoreload 22492 16016 Watching for file changes with StatReloader
+INFO 2023-09-04 13:28:42,797 autoreload 22492 16016 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:28:42,797 proactor_events 22492 16016 Using proactor: IocpProactor
+INFO 2023-09-04 13:28:43,522 autoreload 18948 2972 Watching for file changes with StatReloader
+INFO 2023-09-04 13:29:33,652 autoreload 18948 2972 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:29:33,652 proactor_events 18948 2972 Using proactor: IocpProactor
+INFO 2023-09-04 13:29:34,488 autoreload 20180 3488 Watching for file changes with StatReloader
+INFO 2023-09-04 13:30:38,772 autoreload 20180 3488 D:\laragon\www\django_banhang\django_banhang\django_banhang\settings.py changed, reloading.
+DEBUG 2023-09-04 13:30:38,772 proactor_events 20180 3488 Using proactor: IocpProactor
+INFO 2023-09-04 13:30:39,580 autoreload 13792 12784 Watching for file changes with StatReloader
+INFO 2023-09-04 13:30:46,609 autoreload 13792 12784 D:\laragon\www\django_banhang\django_banhang\django_banhang\settings.py changed, reloading.
+DEBUG 2023-09-04 13:30:46,610 proactor_events 13792 12784 Using proactor: IocpProactor
+INFO 2023-09-04 13:30:47,345 autoreload 16032 14552 Watching for file changes with StatReloader
+INFO 2023-09-04 13:32:08,663 autoreload 16032 14552 D:\laragon\www\django_banhang\django_banhang\django_banhang\settings.py changed, reloading.
+DEBUG 2023-09-04 13:32:08,665 proactor_events 16032 14552 Using proactor: IocpProactor
+INFO 2023-09-04 13:32:09,393 autoreload 16828 13144 Watching for file changes with StatReloader
+INFO 2023-09-04 13:33:08,967 autoreload 16828 13144 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 13:33:08,968 proactor_events 16828 13144 Using proactor: IocpProactor
+INFO 2023-09-04 13:33:10,045 autoreload 19028 12344 Watching for file changes with StatReloader
+WARNING 2023-09-04 13:33:32,605 log 19028 18296 Forbidden: /api/categories/
+WARNING 2023-09-04 13:35:51,213 log 19028 18296 Forbidden: /api/categories/
+WARNING 2023-09-04 13:36:13,012 log 19028 18296 Forbidden: /api/categories/
+WARNING 2023-09-04 13:37:55,860 log 19028 18296 Forbidden: /api/categories/
+ERROR 2023-09-04 13:39:02,515 log 19028 18296 Internal Server Error: /api/categories
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/categories/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2023-09-04 13:39:51,709 log 19028 7068 Internal Server Error: /api/categories
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/categories/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2023-09-04 13:45:32,104 log 19028 21876 Internal Server Error: /api/categories
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/categories/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2023-09-04 13:45:42,472 log 19028 8768 Unsupported Media Type: /api/categories/
+INFO 2023-09-04 13:47:07,569 autoreload 19028 12344 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-09-04 13:47:07,570 proactor_events 19028 12344 Using proactor: IocpProactor
+INFO 2023-09-04 13:47:08,317 autoreload 11632 22136 Watching for file changes with StatReloader
+WARNING 2023-09-04 13:47:10,345 log 11632 22004 Unsupported Media Type: /api/categories/
+WARNING 2023-09-04 13:48:01,730 log 11632 22004 Unsupported Media Type: /api/categories/
+INFO 2023-09-04 13:48:34,918 autoreload 11632 22136 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-09-04 13:48:34,918 proactor_events 11632 22136 Using proactor: IocpProactor
+INFO 2023-09-04 13:48:35,802 autoreload 6092 888 Watching for file changes with StatReloader
+INFO 2023-09-04 13:52:27,366 autoreload 6092 888 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-09-04 13:52:27,366 proactor_events 6092 888 Using proactor: IocpProactor
+INFO 2023-09-04 13:52:28,481 autoreload 16884 13596 Watching for file changes with StatReloader
+INFO 2023-09-04 13:54:11,845 autoreload 16884 13596 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-09-04 13:54:11,845 proactor_events 16884 13596 Using proactor: IocpProactor
+INFO 2023-09-04 13:54:12,585 autoreload 12084 9864 Watching for file changes with StatReloader
+INFO 2023-09-04 13:54:29,061 autoreload 12084 9864 D:\laragon\www\django_banhang\django_banhang\api\serializers.py changed, reloading.
+DEBUG 2023-09-04 13:54:29,063 proactor_events 12084 9864 Using proactor: IocpProactor
+INFO 2023-09-04 13:54:29,867 autoreload 3524 12604 Watching for file changes with StatReloader
+DEBUG 2023-09-04 14:22:49,922 proactor_events 3524 12604 Using proactor: IocpProactor
+DEBUG 2023-09-04 14:22:50,026 proactor_events 18480 14712 Using proactor: IocpProactor
+INFO 2023-09-04 14:22:55,601 autoreload 512 16580 Watching for file changes with StatReloader
+DEBUG 2023-09-04 14:23:20,425 proactor_events 512 16580 Using proactor: IocpProactor
+DEBUG 2023-09-04 14:23:20,503 proactor_events 6448 15252 Using proactor: IocpProactor
+INFO 2023-09-04 14:23:23,330 autoreload 22192 23436 Watching for file changes with StatReloader
+DEBUG 2023-09-04 14:24:02,865 proactor_events 22192 23436 Using proactor: IocpProactor
+DEBUG 2023-09-04 14:24:02,944 proactor_events 22904 21276 Using proactor: IocpProactor
+DEBUG 2023-09-04 15:03:15,993 proactor_events 628 23672 Using proactor: IocpProactor
+INFO 2023-09-04 15:03:20,217 autoreload 21516 24440 Watching for file changes with StatReloader
+INFO 2023-09-04 15:03:51,730 autoreload 21516 24440 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 15:03:51,731 proactor_events 21516 24440 Using proactor: IocpProactor
+INFO 2023-09-04 15:03:52,469 autoreload 16676 6252 Watching for file changes with StatReloader
+INFO 2023-09-04 15:03:59,720 views 16676 19704 Get all product
+WARNING 2023-09-04 15:09:24,415 log 16676 11960 Method Not Allowed: /api/categories/
+WARNING 2023-09-04 15:10:05,628 log 16676 11960 Bad Request: /api/categories/4/
+INFO 2023-09-04 15:18:46,033 autoreload 16676 6252 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 15:18:46,033 proactor_events 16676 6252 Using proactor: IocpProactor
+INFO 2023-09-04 15:18:47,069 autoreload 21696 2908 Watching for file changes with StatReloader
+WARNING 2023-09-04 15:18:52,970 log 21696 7376 Not Found: /api/categories/4/
+INFO 2023-09-04 15:20:41,916 autoreload 21696 2908 D:\laragon\www\django_banhang\django_banhang\api\views.py changed, reloading.
+DEBUG 2023-09-04 15:20:41,917 proactor_events 21696 2908 Using proactor: IocpProactor
+INFO 2023-09-04 15:20:42,705 autoreload 17536 15928 Watching for file changes with StatReloader
+DEBUG 2023-09-04 15:20:57,473 proactor_events 17536 15928 Using proactor: IocpProactor
+DEBUG 2023-09-04 15:20:57,567 proactor_events 16732 13996 Using proactor: IocpProactor

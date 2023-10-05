@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "app.apps.AppConfig",
     "django_cleanup.apps.CleanupConfig",
     "django.contrib.humanize",
+    "rest_framework",
+    "api.apps.ApiConfig",
 ]
 
 MIDDLEWARE = [
@@ -168,4 +170,10 @@ LOGGING = {
             "propagate": True,
         }
     },
+}
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ]
 }
